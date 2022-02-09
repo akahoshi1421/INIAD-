@@ -1,0 +1,52 @@
+{
+    "name": "INIAD++",
+    "version": "0.11.1",
+    "manifest_version": 3,
+    "description": "MOOCsの拡張機能です",
+    "icons":{
+        "16": "img/iniadpp16.png",
+        "48": "img/iniadpp48.png",
+        "128": "img/iniadpp128.png",
+        "512": "img/iniadpp512.png"
+    },
+    "content_scripts":[{
+        "matches":[
+            "https://moocs.iniad.org/*",
+            "https://docs.google.com/presentation/*",
+            "https://www.ace.toyo.ac.jp/ct/home*"
+        ],
+        "js":[
+            "lib/jquery-3.6.0.min.js",
+            "lib/jquery-1.12.0.ui.min.js",
+            "lib/rgbcolor.js",
+            "js/download-button.js",
+            "js/download.js",
+            "js/colorchange.js",
+            "js/backgroundchange.js",
+            "js/background.js",
+            "js/ace_json.js",
+            "js/ace_json_button.js",
+            "js/json_upload.js",
+            "js/json_timetable_localstorage.js",
+            "js/json_timetable.js",
+            "js/tools.js",
+            "js/moocsmemo.js",
+            "js/moocsmemo_btn.js",
+            "js/scrolltop.js",
+            "js/class_sort_button.js",
+            "js/class_sort_default.js",
+            "js/class_sort.js",
+            "js/class_sort_reflect.js",
+            "js/textarea_count.js"
+        ],
+        "css":[
+            "lib/jquery-1.12.1.ui.css",
+            "css/download-button.css",
+            "css/ace_dl.css",
+            "css/json_upload.css",
+            "css/mymemo.css",
+            "css/scrolltop.css",
+            "css/class_sort.css"
+        ]
+    }]
+}
