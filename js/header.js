@@ -5,6 +5,10 @@ $(function(){
                 "position": "fixed",
                 "width": "100%"
             });
+            $(".main-sidebar").css({
+                "position": "fixed"
+            });
+
             $(".content-wrapper").css({"padding-top": "50px"});
         }
     }

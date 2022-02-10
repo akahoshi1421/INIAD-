@@ -47,7 +47,7 @@ $(function(){
         //↑manifestversionが2だとこんな感じの書き方じゃないとcssが反映されなかったので
 
 
-        const header = '<div class="form-group row">    <label class="col-sm-3 col-form-label">ヘッダを固定</label>    <div class="col-sm-9">        <input type="checkbox" id="header-form" size="50">    </div></div>';
+        const header = '<div class="form-group row">    <label class="col-sm-3 col-form-label">ヘッダ・サイドバーを固定</label>    <div class="col-sm-9">        <input type="checkbox" id="header-form" size="50">    </div></div>';
 
         $("#myadd_form_content").after(header);
 
