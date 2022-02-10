@@ -30,14 +30,14 @@
             "js/json_timetable_localstorage.js",
             "js/json_timetable.js",
             "js/tools.js",
-            "js/moocsmemo.js",
             "js/moocsmemo_btn.js",
             "js/scrolltop.js",
             "js/class_sort_button.js",
             "js/class_sort_default.js",
             "js/class_sort.js",
             "js/class_sort_reflect.js",
-            "js/textarea_count.js"
+            "js/textarea_count.js",
+            "js/header.js"
         ],
         "css":[
             "lib/jquery-1.12.1.ui.css",
@@ -46,7 +46,8 @@
             "css/json_upload.css",
             "css/mymemo.css",
             "css/scrolltop.css",
-            "css/class_sort.css"
+            "css/class_sort.css",
+            "css/settingform.css"
         ]
     }]
 }
