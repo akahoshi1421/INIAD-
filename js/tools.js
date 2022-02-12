@@ -9,4 +9,7 @@ $(function(){
 
     const mymemo = '<li>    <a id="mynote">        <i class="fas fa-sticky-note"></i>        <span>            <span class="sidevar-menu-text">このページのメモ</span>        </span>    </a></li>';
     $(".sidebar-menu").append(mymemo);
+
+    const mymemolists = '<li>    <a href="https://moocs.iniad.org/courses?memolists">        <i class="fas fa-list"></i>        <span>            <span class="sidevar-menu-text">メモを保存したページ一覧</span>        </span>    </a></li>';
+    $(".sidebar-menu").append(mymemolists);
 });

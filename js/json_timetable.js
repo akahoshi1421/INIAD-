@@ -105,7 +105,7 @@ $(function(){
                 }
             }
 
-            const alt = '<div id="mycls">次の講義は<b>' + cls + '</b>です</div>'
+            const alt = '<div id="mycls"><i class="fas fa-exclamation-triangle"></i>次の講義は<b>' + cls + '</b>です</div>'
             $(".content-header").append(alt);
             $("#mycls").addClass("alert alert-warning");
         }

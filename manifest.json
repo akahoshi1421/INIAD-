@@ -1,6 +1,6 @@
 {
     "name": "INIAD++",
-    "version": "0.11.1",
+    "version": "0.14.2",
     "manifest_version": 3,
     "description": "MOOCsの拡張機能です",
     "icons":{
@@ -32,12 +32,14 @@
             "js/tools.js",
             "js/moocsmemo_btn.js",
             "js/scrolltop.js",
+            "js/drive_buttons.js",
             "js/class_sort_button.js",
             "js/class_sort_default.js",
             "js/class_sort.js",
             "js/class_sort_reflect.js",
             "js/textarea_count.js",
-            "js/header.js"
+            "js/header.js",
+            "js/memolist.js"
         ],
         "css":[
             "lib/jquery-1.12.1.ui.css",

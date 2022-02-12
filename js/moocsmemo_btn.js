@@ -53,7 +53,7 @@ $(document).on("click", "#mynote", function(){
                     if(textarea_localstg){//nullよけ
                         null_check = true;
                         let rand = Math.random() * 3 + 3;
-                        const moocsmemo = '<div class="mymemo-contents" cnt=' + cnt + ' style="right: ' + rand + '%">    <ul class="memoul"><li><i class="fas fa-trash memodelete" title="削除"></i></li><li><i class="fas fa-sticky-note memonew" title="新規"></i></li><li><i class="fas fa-times memocross" title="閉じる"></i></li></ul><div class="mymemopd"></div>    <textarea rows="15" class="textarea-mymemo">' + decodeURIComponent(textarea_localstg) + '</textarea>    <button class="btn btn-primary btn-sm memobtn">ダウンロード</button></div>';
+                        const moocsmemo = '<div class="mymemo-contents" cnt=' + cnt + ' style="right: ' + rand + '%">    <ul class="memoul"><li><i class="fas fa-trash memodelete" title="削除"></i></li><li><i class="fas fa-sticky-note memonew" title="新規"></i></li><li><i class="fas fa-times memocross" title="閉じる"></i></li></ul><div class="mymemopd"></div>    <textarea rows="15" class="textarea-mymemo" placeholder="入力した文字はweb上に自動的に保存されます">' + decodeURIComponent(textarea_localstg) + '</textarea>    <button class="btn btn-primary btn-sm memobtn"><i class="fas fa-download"></i>ダウンロード</button></div>';
                         $(".content-wrapper").prepend(moocsmemo);
                     }
                     cnt++;
@@ -61,14 +61,14 @@ $(document).on("click", "#mynote", function(){
                 }
                 if(!null_check){//すべて消してしまった場合の処理
                     let rand = Math.random() * 3 + 3;
-                    const moocsmemo = '<div class="mymemo-contents" cnt="0" style="right: ' + rand + '%">    <ul class="memoul"><li><i class="fas fa-trash memodelete" title="削除"></i></li><li><i class="fas fa-sticky-note memonew" title="新規"></i></li><li><i class="fas fa-times memocross" title="閉じる"></i></li></ul><div class="mymemopd"></div>    <textarea rows="15" class="textarea-mymemo"></textarea>    <button class="btn btn-primary btn-sm memobtn">ダウンロード</button></div>';
+                    const moocsmemo = '<div class="mymemo-contents" cnt="0" style="right: ' + rand + '%">    <ul class="memoul"><li><i class="fas fa-trash memodelete" title="削除"></i></li><li><i class="fas fa-sticky-note memonew" title="新規"></i></li><li><i class="fas fa-times memocross" title="閉じる"></i></li></ul><div class="mymemopd"></div>    <textarea rows="15" class="textarea-mymemo" placeholder="入力した文字はweb上に自動的に保存されます"></textarea>    <button class="btn btn-primary btn-sm memobtn"><i class="fas fa-download"></i>ダウンロード</button></div>';
                     $(".content-wrapper").prepend(moocsmemo);
                 }
             }
 
             else{//ない場合
                 let rand = Math.random() * 3 + 3;
-                const moocsmemo = '<div class="mymemo-contents" cnt="0" style="right: ' + rand + '%">    <ul class="memoul"><li><i class="fas fa-trash memodelete" title="削除"></i></li><li><i class="fas fa-sticky-note memonew" title="新規"></i></li><li><i class="fas fa-times memocross" title="閉じる"></i></li></ul><div class="mymemopd"></div>    <textarea rows="15" class="textarea-mymemo"></textarea>    <button class="btn btn-primary btn-sm memobtn">ダウンロード</button></div>';
+                const moocsmemo = '<div class="mymemo-contents" cnt="0" style="right: ' + rand + '%">    <ul class="memoul"><li><i class="fas fa-trash memodelete" title="削除"></i></li><li><i class="fas fa-sticky-note memonew" title="新規"></i></li><li><i class="fas fa-times memocross" title="閉じる"></i></li></ul><div class="mymemopd"></div>    <textarea rows="15" class="textarea-mymemo" placeholder="入力した文字はweb上に自動的に保存されます"></textarea>    <button class="btn btn-primary btn-sm memobtn"><i class="fas fa-download"></i>ダウンロード</button></div>';
                 $(".content-wrapper").prepend(moocsmemo);
             }
 
@@ -102,7 +102,7 @@ $(document).on("click", ".memonew", function(){
     default_cnt++;
 
     let rand = Math.random() * 6 + 3;
-    const moocsmemo = '<div class="mymemo-contents" cnt=' + default_cnt + ' style="right: ' + rand + '%">    <ul class="memoul"><li><i class="fas fa-trash memodelete" title="削除"></i></li><li><i class="fas fa-sticky-note memonew" title="新規"></i></li><li><i class="fas fa-times memocross" title="閉じる"></i></li></ul><div class="mymemopd"></div>    <textarea rows="15" class="textarea-mymemo"></textarea>    <button class="btn btn-primary btn-sm memobtn">ダウンロード</button></div>';
+    const moocsmemo = '<div class="mymemo-contents" cnt=' + default_cnt + ' style="right: ' + rand + '%">    <ul class="memoul"><li><i class="fas fa-trash memodelete" title="削除"></i></li><li><i class="fas fa-sticky-note memonew" title="新規"></i></li><li><i class="fas fa-times memocross" title="閉じる"></i></li></ul><div class="mymemopd"></div>    <textarea rows="15" class="textarea-mymemo" placeholder="入力した文字はweb上に自動的に保存されます"></textarea>    <button class="btn btn-primary btn-sm memobtn"><i class="fas fa-download"></i>ダウンロード</button></div>';
     $(".content-wrapper").prepend(moocsmemo);
     memoui();
 });
