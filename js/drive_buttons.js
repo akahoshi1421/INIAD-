@@ -1,5 +1,5 @@
 $(function(){
-    if(window.location.pathname == "/courses"){
+    if(window.location.origin.indexOf("moocs")){
         let bodys = $(".media-body");
         let year = $($(".active")).text();
         year = year.split(" ")[1];//一番手前にスペースがあるっぽいので
