@@ -1,6 +1,8 @@
 $(function(){
-    const btn_default = '<button class="btn btn-primary" id="showdefault">元の並び順を表示</button>';
-    $($(".flex")[0]).before(btn_default);
+    if(window.location.pathname == "/courses"){
+        const btn_default = '<button class="btn btn-primary" id="showdefault">元の並び順を表示</button>';
+        $($(".flex")[0]).before(btn_default);
+    }
 });
 
 $(document).on("click", "#showdefault", function(){
