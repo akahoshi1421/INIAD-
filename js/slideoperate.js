@@ -28,25 +28,25 @@ document.onkeydown = event =>{
             });
         }
         else if(event.key == "w"){
-            slidey += 10;
-            $(".embed-responsive").css({
-                "transform": "scale(" + slidescale + ")" + " translate(" + slidex + "px, " + slidey + "px)"
-            });
-        }
-        else if(event.key == "s"){
             slidey -= 10;
             $(".embed-responsive").css({
                 "transform": "scale(" + slidescale + ")" + " translate(" + slidex + "px, " + slidey + "px)"
             });
         }
+        else if(event.key == "s"){
+            slidey += 10;
+            $(".embed-responsive").css({
+                "transform": "scale(" + slidescale + ")" + " translate(" + slidex + "px, " + slidey + "px)"
+            });
+        }
         else if(event.key == "a"){
-            slidex += 10;
+            slidex -= 10;
             $(".embed-responsive").css({
                 "transform": "scale(" + slidescale + ")" + " translate(" + slidex + "px, " + slidey + "px)"
             });
         }
         else if(event.key == "d"){
-            slidex -= 10;
+            slidex += 10;
             $(".embed-responsive").css({
                 "transform": "scale(" + slidescale + ")" + " translate(" + slidex + "px, " + slidey + "px)"
             });
