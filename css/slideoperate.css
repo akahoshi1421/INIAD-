@@ -20,3 +20,7 @@
 #slidedefault{
     margin-bottom: 5px;
 }
+
+#slideiframediv > iframe{
+    width: 100%;
+}
