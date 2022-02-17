@@ -1,0 +1,22 @@
+.embed-responsive{
+    z-index: 4;
+}
+
+#slidebutton-div{
+    z-index: 100;
+    width: 5%;
+    height: 50px;
+    position: fixed;
+    right: 0.8%;
+    top: 20%;
+    opacity: 0.9;
+}
+
+#slidearrow{
+    font-size: 250%;
+    color: #337ab7;
+}
+
+#slidedefault{
+    margin-bottom: 5px;
+}

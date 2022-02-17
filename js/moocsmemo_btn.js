@@ -6,7 +6,7 @@ function memoui()
     $(".mymemo-contents").resizable();
     $(".mymemo-contents").css({
         "position": "absolute",
-        "z-index": "1"
+        "z-index": "5"
     });//何故かバグるのでCSSを上書き
 
     let txtareas = $("textarea");
@@ -147,11 +147,11 @@ $(document).on("input", ".textarea-mymemo", function(){
 //クリックした時その要素が一番前に出るように
 $(document).on("mousedown", ".mymemo-contents", function(){
     $(".mymemo-contents").css({
-        "z-index": "1"
+        "z-index": "5"
     });
 
     $(this).css({
-        "z-index": "2"
+        "z-index": "6"
     });
 });
 
