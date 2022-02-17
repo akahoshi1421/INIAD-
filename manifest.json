@@ -1,6 +1,6 @@
 {
     "name": "INIAD++",
-    "version": "0.15.2",
+    "version": "0.15.3",
     "manifest_version": 3,
     "description": "MOOCsの拡張機能です",
     "icons":{
