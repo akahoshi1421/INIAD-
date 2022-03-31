@@ -52,7 +52,8 @@
             "css/scrolltop.css",
             "css/class_sort.css",
             "css/settingform.css",
-            "css/slideoperate.css"
+            "css/slideoperate.css",
+            "css/pointer.css"
         ]
     }]
 }
