@@ -1,6 +1,7 @@
 # INIAD++
 ![説明](img/discription.PNG)
 東洋大学情報連携学部(INIAD)のオンライン教育システム[INIAD MOOCs](https://moocs.iniad.org/)とその周辺サイト群に様々な機能を追加するGoogle Chrome™ の拡張機能です。
+[chromeウェブストア](https://chrome.google.com/webstore/detail/iniad%2B%2B/ejncknkekdpnmenagjepeaagdmjjlihk?hl=ja)
 
 ## 機能
 * 直近の講義のお知らせ
