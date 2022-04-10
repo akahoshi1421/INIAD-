@@ -1,8 +1,8 @@
 {
     "name": "INIAD++",
-    "version": "0.15.3",
+    "version": "1.0.1",
     "manifest_version": 3,
-    "description": "MOOCsの拡張機能です",
+    "description": "This is a Google Chrome extension that adds various functions to INIAD MOOCs",
     "icons":{
         "16": "img/iniadpp16.png",
         "48": "img/iniadpp48.png",
@@ -41,7 +41,8 @@
             "js/header.js",
             "js/memolist.js",
             "js/slideoperate.js",
-            "js/slide_question.js"
+            "js/slide_question.js",
+            "js/memonulldelete.js"
         ],
         "css":[
             "lib/jquery-1.12.1.ui.css",
