@@ -16,7 +16,7 @@ $(function(){
                     wordcnt = 0;
                 }
 
-                const insertcnt = "<p>文字数:" + txtcnt + " 単語数:" + wordcnt + "</p>";
+                const insertcnt = '<p id="iniadppwordcnt">文字数:' + txtcnt + " 単語数:" + wordcnt + "</p>";
                 $(txtarea).after(insertcnt);
             }
         }, 1000)
@@ -37,5 +37,11 @@ $(document).on("input", "textarea", function(){
     }
 
     const insertcnt = "文字数:" + txtcnt + " 単語数:" + wordcnt;
-    $($(this).next()).text(insertcnt);
+
+    if($(this).next().attr("id") == "iniadppwordcnt"){
+        $($(this).next()).text(insertcnt);
+    }
+    else{
+        $(this).after('<p id="iniadppwordcnt">' + insertcnt + "</p>");
+    }
 });

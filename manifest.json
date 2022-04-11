@@ -1,6 +1,6 @@
 {
     "name": "INIAD++",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "manifest_version": 3,
     "description": "This is a Google Chrome extension that adds various functions to INIAD MOOCs",
     "icons":{
