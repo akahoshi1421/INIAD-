@@ -5,7 +5,7 @@ function memoui()
     $(".mymemo-contents").draggable();
     $(".mymemo-contents").resizable();
     $(".mymemo-contents").css({
-        "position": "absolute",
+        "position": "fixed",
         "z-index": "5"
     });//何故かバグるのでCSSを上書き
 
