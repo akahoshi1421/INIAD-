@@ -1,6 +1,8 @@
 $(function(){
     if(window.location.host == "moocs.iniad.org"){
-        $(".file-container .file-trigger-btn").text("クリックかここにドロップしてアップロード");
+        setTimeout(function(){
+            $(".file-container .file-trigger-btn").text("クリックかここにドロップしてアップロード");
+        }, 200);
     }
 })
 
