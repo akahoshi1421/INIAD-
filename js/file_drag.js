@@ -18,6 +18,7 @@ $(document).on("dragleave", ".file-container .file-trigger-btn:enabled", functio
 
 $(document).on("drop", ".file-container .file-trigger-btn:enabled", function(e){
     e.preventDefault();
+    $(this).removeClass("dragover");
     e2 = e.originalEvent;//jQueryがdataTransfer.filesを対応していないため
     $(".file-container .form-control-file")[0].files = e2.dataTransfer.files;
 });
