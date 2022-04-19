@@ -42,8 +42,7 @@
             "js/memolist.js",
             "js/slideoperate.js",
             "js/slide_question.js",
-            "js/memonulldelete.js",
-            "js/file_drag.js"
+            "js/memonulldelete.js"
         ],
         "css":[
             "lib/jquery-1.12.1.ui.css",
