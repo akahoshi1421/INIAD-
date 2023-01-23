@@ -55,8 +55,8 @@ $(function(){
         let check = confirm("ダウンロードしますか？");
         if(check){
             const name_html = $("title").text();
-            const default_html_front = "<div class='row'><div class='col-4'><div class='fix'><h2>目次</h2><hr><ul>";//バーに繋げる
-            const default_html_mid = "</ul></div></div><div class='col-8'>"//本体に繋げる
+            const default_html_front = "<div class='row'><div class='col-4' id='slide-control'><div class='fix'><h2>目次</h2><hr><ul>";//バーに繋げる
+            const default_html_mid = "</ul></div></div><div class='col-8' id='slide-body'>"//本体に繋げる
             const default_html_back = "</div>"//最後に繋げる
 
             let click_cnt = 0;
@@ -145,7 +145,7 @@ $(function(){
                             page_result += "<div class='col-8'>";
                             page_result += new XMLSerializer().serializeToString(slide);
                             page_result += "</div>";
-                            page_result += "<div class='col-4'>";
+                            page_result += "<div class='col-3'>";
                             
                             page_result += text;
                             
@@ -165,12 +165,14 @@ $(function(){
                             cnt++;
                         }
                         
-                        const style = "<style>.blank{height: 15px;}.blank2{height: 10px;}ul{height: 700px; width:60%; overflow: auto; overflow-x: auto; list-style: none;}h2{padding-left: 25%;}.fix{position: fixed; width: 50%;}hr{width: 60%;}</style>";
+                        const style = "<style>.blank{height: 15px;}.blank2{height: 10px;}ul{height: 700px; width:60%; overflow: auto; overflow-x: auto; list-style: none;}h2{padding-left: 25%;}.fix{position: fixed; width: 50%;}hr{width: 60%;}#control-div{position: fixed; top: 5px; right: 20px}body{margin: 20px;}</style>";
+
+                        const showSlideControlScript = `<script>const checkbox = document.getElementById("control-on");checkbox.addEventListener("click", () => {    const body = document.getElementById("slide-body");    const control = document.getElementById("slide-control");        if(checkbox.checked){        body.classList.remove("col-12");        body.classList.add("col-8");        control.classList.add("col-4");        control.style.display = "block";    }    else{        body.classList.remove("col-8");        body.classList.add("col-12");        control.classList.remove("col-4");        control.style.display = "none";    }});</script>`
             
                         //const bootstrap = '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">';
             
-                        let result = "<!DOCTYPE html><html><head><title>" + name_html + "</title>" + bootstrap + style + "</head>" +
-                        "<body>" + default_html_front + page_bar + default_html_mid + page_result + default_html_back + "</body></html>";
+                        let result = "<!DOCTYPE html><html lang='ja'><head><title>" + name_html + "</title>" + bootstrap + style + "</head>" +
+                        "<body>" + default_html_front + page_bar + default_html_mid + page_result + default_html_back + '</div><div id="control-div"><label for="control-on">目次</label><input type="checkbox" id="control-on" checked></div>' + "</body>" + showSlideControlScript +"</html>";
             
                         let link = document.createElement("a");
                         link.href = URL.createObjectURL(new Blob([result],{

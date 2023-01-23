@@ -96,3 +96,23 @@ $(document).on("click", "#mynote", function(){
 function colorchange(){let result = $("#bgc_input").val();document.cookie = "bgcolor=" + result + ";max-age=31536000";window.location="https://moocs.iniad.org/account";}
 
 function dl(){    if(window.location.href.indexOf("https://www.ace.toyo.ac.jp/ct/home") != -1){        let conf = confirm("jsonをダウンロードしますか?");        if(conf){            let table = $(".stdlist")[0];            let tbody = $(table).find("tr");            let result = {};            for(let i = 1; i < 9; i++){                let l = [];                let one_time = $(tbody[i]).find(".course");                for(let i2 = 0; i2 < one_time.length; i2++){                    let course = "";                    if($(one_time[i2]).hasClass("course-cell")){                        course = $(one_time[i2]).find("a")[0].text;                    }                    l.push(course);                }                result[i] = l;            }            let result_json = JSON.stringify(result, null, "");            let link = document.createElement("a");            link.href = URL.createObjectURL(new Blob([result_json],{                type: "application/json"            }));            link.download = ("timetable.json");            link.click();        }    }}
+
+
+const checkbox = document.getElementById("control-on");
+checkbox.addEventListener("click", () => {
+    const body = document.getElementById("slide-body");
+    const control = document.getElementById("slide-control");
+    
+    if(checkbox.checked){
+        body.classList.remove("col-12");
+        body.classList.add("col-8");
+        control.classList.add("col-4");
+        control.style.display = "block";
+    }
+    else{
+        body.classList.remove("col-8");
+        body.classList.add("col-12");
+        control.classList.remove("col-4");
+        control.style.display = "none";
+    }
+});
