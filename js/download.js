@@ -54,7 +54,7 @@ $(function(){
     if(window.location.href.indexOf("docs.google.com/presentation/d/e") != -1){
         let check = confirm("ダウンロードしますか？");
         if(check){
-            const name_html = $("title").text();
+            let name_html;
             const default_html_front = "<div class='row'><div class='col-4' id='slide-control'><div class='fix'><h2>目次</h2><hr><ul>";//バーに繋げる
             const default_html_mid = "</ul></div></div><div class='col-8' id='slide-body'>"//本体に繋げる
             const default_html_back = "</div>"//最後に繋げる
@@ -124,6 +124,12 @@ $(function(){
                         let cnt = 1;
                         for(;;){
                             let title = $(".punch-viewer-svgpage-a11yelement").attr('aria-label');
+                            if(cnt == 1){
+                                const titleArray = title.split(":").slice(1);
+
+                                const pageTitle = titleArray.join("");
+                                name_html = pageTitle != " " ? pageTitle : $("title").text(); 
+                            }
                             let slide = $('.punch-viewer-svgpage-svgcontainer:last>svg').get(0);
             
                             

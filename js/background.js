@@ -41,9 +41,12 @@ $(function(){
         $("#my_text_left").addClass("text-left");
 
         let my_button = '<button id="bgc_change">反映</button>';
+        let my_delete = '<button id="bgc_delete">設定を削除</button>';
         $("#my_text_left").append(my_button);
+        $("#my_text_left").append(my_delete);
 
         $("#bgc_change").addClass("btn btn-primary");
+        $("#bgc_delete").addClass("btn btn-danger");
         //↑manifestversionが2だとこんな感じの書き方じゃないとcssが反映されなかったので
 
 
